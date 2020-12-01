@@ -1,0 +1,21 @@
+# turn off need for password using sudo
+sudo visudo
+change this: %sudo ALL=(ALL) ALL
+to this: %sudo ALL=(ALL) NOPASSWD: ALL
+
+#must install browser plugins -> Brave
+
+google translate
+vimium
+betternet vpn
+
+# vim setup
+just run `vim` and plugins will auto install
+
+#gnome-termnial setup
+
+open terminal
+edit->preferences
+select "white on black"
+select "Tango"
+select "Bright bold colors"
