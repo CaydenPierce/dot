@@ -28,6 +28,10 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 sudo git clone https://github.com/bhilburn/powerlevel9k.git /usr/share/powerlevel9k
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git /usr/share/zsh-syntax-highlighting
 
+#install plugins for zsh
+sudo apt-get install zsh-syntax-highlighting
+git clone https://github.com/bhilburn/powerlevel9k.git /usr/share/powerlevel9k
+
 #vim plugin manager
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
