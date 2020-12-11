@@ -50,7 +50,7 @@ COMPLETION_WAITING_DOTS="true"
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
@@ -69,10 +69,10 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-	git
 	colored-man-pages
     history-substring-search
 )
+	#git
 
 
 source $ZSH/oh-my-zsh.sh
@@ -123,6 +123,8 @@ alias i='sudo apt-get install'
 alias hs='history | grep'
 alias fadb='adb kill-server && adb start-server'
 alias s='sudo'
+alias lb='sudo python3 /home/cayden/Tester/blueberry/blueberry-experiments/bby_utils/list_bbys.py'
+alias xc='cat $1 | xclip -selection c'
 #plugins and shit
 source /usr/share/powerlevel9k/powerlevel9k.zsh-theme
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -145,3 +147,25 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 alias kg='killall glava'
 alias sgd='glava --desktop'
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/cayden/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/cayden/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/cayden/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/cayden/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/cayden/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/home/cayden/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/cayden/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/cayden/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
