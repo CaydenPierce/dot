@@ -12,11 +12,13 @@ echo "xset r rate 200 25" > ~/.xsessionrc
 
 #must have apt packages
 
-sudo apt-get install i3 xclip gimp python3 python3-pip inkscape zsh git pdfshuffler vim nmap net-tools expect snapd curl wget -y
+sudo apt-get install i3 xclip gimp python3 python3-pip inkscape zsh git pdfshuffler vim nmap net-tools expect snapd curl wget kicad redshift redshift-gtk make -y
 
 #must have snap packages
 
 sudo snap install signal-desktop -y
+sudo snap install android-studio --classic
+sudo snap install code --classic
 
 #make zsh default shell
 
