@@ -23,9 +23,12 @@ set tabstop=4
 set shiftwidth=4
 set autoindent
 
-" autocomment bash and python
+" autocomment
 vnoremap <silent> # :s/^/#/<cr>:noh<cr>
 vnoremap <silent> -# :s/^#//<cr>:noh<cr>
+
+vnoremap <silent> / :s/^/\/\//<cr>:noh<cr>
+vnoremap <silent> -/ :s/^\/\///<cr>:noh<cr>
 
 " fix the damn python non indenting comments thing
 set nosmartindent
@@ -35,3 +38,12 @@ set cindent
 set nocompatible
 filetype plugin on
 syntax on
+
+set signcolumn=no
+
+" turn off YCM preview window shit
+set completeopt-=preview
+
+" tab completion
+set wildmode=longest,list,full
+set wildmenu
