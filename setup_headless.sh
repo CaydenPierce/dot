@@ -11,8 +11,7 @@ user=$1
 echo "xset r rate 200 25" > ~/.xsessionrc
 
 #must have apt packages
-
-sudo apt-get install xclip python3 python3-pip zsh git vim nmap net-tools expect snapd curl wget make agrep ffmpeg apache2 nginx -y
+sudo apt-get install i3 xclip python3 python3-pip zsh git pdfshuffler vim nmap net-tools snapd curl wget redshift redshift-gtk make vlc apache2 -y
 
 #must have snap packages
 
@@ -27,8 +26,8 @@ sudo git clone https://github.com/bhilburn/powerlevel9k.git /usr/share/powerleve
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git /usr/share/zsh-syntax-highlighting
 
 #install plugins for zsh
-sudo apt-get install zsh-syntax-highlighting
-git clone https://github.com/bhilburn/powerlevel9k.git /usr/share/powerlevel9k
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git /usr/share/zsh-syntax-highlighting
 
 #vim plugin manager
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
@@ -46,13 +45,10 @@ cp ./.vimrc ./.zshrc /home/$user
 sudo chmod $user /home/$user/.vimrc
 sudo chmod $user /home/$user/.zshrc
 
-#must have extra programs
-
-#set caps lock as escpae
-
-setxkbmap -option caps:escape #doesn't work...
 
 #then resign in under i3 desktop
+
+curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
 
 sudo reboot now
 
